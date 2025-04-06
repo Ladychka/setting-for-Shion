@@ -122,7 +122,7 @@ USE_TZ = True
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'all',
-        'skin': 'moono',git 
+        'skin': 'moono',
         'codeSnippet_theme': 'monokai',
         'extraPlugins': ','.join(
             [
