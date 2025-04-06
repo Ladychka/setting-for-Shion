@@ -1,0 +1,41 @@
+{% load static %}
+
+{% include "Project/head.html" %}
+
+<!-- CSS here -->
+     {% include "Project/CSShere.html" %}   
+</head>
+<body class="full-wrapper">
+    <!-- ? Preloader Start -->
+         {% include "Project/PreloaderStart.html" %} 
+        <!-- Preloader Start-->
+        <header>
+            <!-- Header Start -->
+            {% include "Project/HeaderStart.html" %}
+            <!-- Header End -->
+        </header>
+        <!-- header end -->
+    <main>
+        <!-- breadcrumb Start-->
+        {% include "Project/breadcrumbStartContact.html" %}
+        <!-- breadcrumb End-->
+        <!-- Hero Area End-->
+        <!--?  Contact Area start  -->
+        {% include "Project/ContactAreastart.html" %}
+        <!-- Contact Area End -->
+    </main>
+    <footer>
+        <!-- Footer Start-->
+            {% include "Project/FooterStart.html" %}
+  <!-- Footer End-->
+</footer>
+<!--? Search model Begin -->
+        {% include "Project/SearchmodelBegin.html" %}
+<!-- Search model end -->
+
+<!-- JS here -->
+<!-- Jquery, Popper, Bootstrap -->
+{% include "Project/JShere.html" %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+<div class="popular-product pt-50">
+    <div class="container-fluid">
+        <div class="row">
+            {% for DTBlogLocation in DTBlogLocations %}
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="single-product mb-50">
+                    <div class="location-img">
+                        <img src="{% static DTBlogLocation.BlogImage %}" alt="">
+                    </div>
+                    <div class="location-details">
+                        <p><a href="{% url 'blog_details' DTBlogLocation.id %}">{{DTBlogLocation.BlogTitle}}</a></p>
+                        <a href="{% url 'blog_details' DTBlogLocation.id %}" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+        
+    </div>
+</div>

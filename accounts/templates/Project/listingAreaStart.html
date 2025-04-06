@@ -1,0 +1,103 @@
+{% load static %}
+<div class="category-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-8 col-md-10">
+                <div class="section-tittle mb-50">
+                    <h2>Shop with us</h2>
+                    <p>Browse from {{ DTProductAssignments|length }} latest items</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-4">
+                <div class="product-filters mb-50">
+                    <div class="filter-section">
+                        <select class="form-select" id="categoryFilter">
+                            <option value="">Category</option>
+                            <option value="Shat">Shirt</option>
+                            <option value="T-shart">T-shirt</option>
+                            <option value="Pent">Pants</option>
+                            <option value="Dress">Dress</option>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <select class="form-select" id="sizeFilter">
+                            <option value="">Size</option>
+                            <option value="SM">SM</option>
+                            <option value="LG">LG</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <select class="form-select" id="dimensionFilter">
+                            <option value="">Dimensions</option>
+                            <option value="1.2ft">1.2ft</option>
+                            <option value="2.5ft">2.5ft</option>
+                            <option value="5.2ft">5.2ft</option>
+                            <option value="3.2ft">3.2ft</option>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <select class="form-select" id="colorFilter">
+                            <option value="">Color</option>
+                            <option value="Whit">White</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Sky Blue">Sky Blue</option>
+                            <option value="Gray">Gray</option>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <select class="form-select" id="priceFilter">
+                            <option value="">Price Range</option>
+                            <option value="10-20">$10 to $20</option>
+                            <option value="20-30">$20 to $30</option>
+                            <option value="50-80">$50 to $80</option>
+                            <option value="100-120">$100 to $120</option>
+                            <option value="200-300">$200 to $300</option>
+                            <option value="500-600">$500 to $600</option>
+                        </select>
+                    </div>
+                </div>
+                </div>
+            <div class="col-xl-9 col-lg-9 col-md-8">
+                <div class="new-arrival new-arrival2">
+                    <div class="row">
+                        {% for DTProductAssignment in DTProductAssignments %}
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-new-arrival mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="{% static DTProductAssignment.ProductImage %}" alt="{{ DTProductAssignment.ProductName }}">
+                                    <div class="favorit-items">
+                                        <a href="#" class="favorite-button" data-product-id="{{ DTProductAssignment.id }}">
+                                            <img src="{% static 'StaticPro/img/gallery/favorit-card.png' %}" alt="Add to Favorites">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular-caption">
+                                    <h3><a href="{% url 'product_details' DTProductAssignment.id %}">{{ DTProductAssignment.ProductName }}</a></h3>
+                                    <div class="rating mb-10">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>$ {{ DTProductAssignment.ProductPrice }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="room-btn mt-20">
+                        <a href="" class="border-btn">Browse More</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>

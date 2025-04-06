@@ -1,0 +1,29 @@
+{% load static %}
+<div class="about-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for DTAbout in DTAbouts %}
+            <div class="col-lg-10">
+                <div class="section-tittle mb-60 text-center pt-10">
+                    <h2>{{DTAbout.AboutTitle}}</h2>
+                    <p class="pera">{{DTAbout.AboutText}}</p>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="about-img pb-bottom">
+                    <img src="{% static DTAbout.AboutImage %}" alt="" class="w-100">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+       
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-tittle mb-60 text-center pt-10">
+                    <h2>2025</h2>
+                    <p class="pera">Every great brand begins with a dream, and ours started with a deep love for style, creativity, and self-expression. What began as a small idea soon transformed into Shion, a fashion destination designed for those who dare to be different.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+{% load static %}
+ <!-- Footer Start-->
+ <div class="footer-area footer-padding">
+  <div class="container-fluid ">
+      <div class="row d-flex justify-content-between">
+          <div class="col-xl-3 col-lg-3 col-md-8 col-sm-8">
+           <div class="single-footer-caption mb-50">
+             <div class="single-footer-caption mb-30">
+                <!-- logo -->
+                <div class="footer-logo mb-35">
+                 <a href="index.html"><img src="{% static 'StaticPro/img/logo/logo2_footer.png' %}" alt=""></a>
+             </div>
+             <div class="footer-tittle">
+                 <div class="footer-pera">
+                     <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                 </div>
+             </div>
+             <!-- social -->
+             <div class="footer-social">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+  <div class="single-footer-caption mb-50">
+      <div class="footer-tittle">
+     
+         <h4>About Us</h4>
+          <ul>
+            {% for DTFabout in DTFabouts %}
+              <li><a href="{% url 'about' %}">{{DTFabout.AboutText|safe}}</a></li>
+              {% endfor %}
+          </ul>
+         
+      </div>
+  </div>
+</div>
+<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+  <div class="single-footer-caption mb-50">
+      <div class="footer-tittle">
+        <h4>Our Blog</h4>
+        <ul>
+          {% for DTFblog in DTFblogs %}
+            <li><a href="{% url 'blog' %}">{{DTFblog.BlogText|safe}}</a></li>
+            {% endfor %}
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+  <div class="single-footer-caption mb-50">
+      <div class="footer-tittle">
+        <h4>Our Product</h4>
+        <ul>
+          {% for DTFcontact in DTFcontacts %}
+            <li><a href="{% url 'elements' %}">{{DTFcontact.ContactText|safe}}</a></li>
+            {% endfor %}
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
+  <div class="single-footer-caption mb-50">
+      <div class="footer-tittle">
+        <h4>Thank You</h4>
+        <ul>
+          {% for DTFthank in DTFthanks %}
+            <li><a href="{% url 'main' %}">{{DTFthank.ThankText|safe}}</a></li>
+            {% endfor %}
+        </ul>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- footer-bottom area -->
+<div class="footer-bottom-area">
+  <div class="container">
+    <div class="footer-border">
+      <div class="row d-flex align-items-center">
+        <div class="col-xl-12">
+          <div class="footer-copy-right text-center">
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with
+              <i class="fa fa-heart" aria-hidden="true"></i> by
+              <a href="https://colorlib.com" target="_blank">Kmeng Toch</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

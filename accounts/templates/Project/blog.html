@@ -1,0 +1,40 @@
+{% load static %}
+
+{% include "Project/head.html" %}
+
+    <!-- CSS here -->
+    {% include "Project/CSShere.html" %}
+    
+</head>
+<body class="full-wrapper">
+    <!-- ? Preloader Start -->
+    {% include "Project/PreloaderStart.html" %}
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        {% include "Project/HeaderStart.html" %}
+        <!-- Header End -->
+    </header>
+    <!-- header end -->
+    <main>
+        <!-- breadcrumb Start-->
+        {% include "Project/breadcrumbStartblogBlog.html" %}
+        <!-- breadcrumb End-->
+        <!-- Hero Area End-->
+        <!--? Blog Area Start-->
+        {% include "Project/BlogAreaStartBlogblog.html" %}
+        <!-- Blog Area End -->
+    </main>
+    <footer>
+        <!-- Footer Start-->
+        {% include "Project/FooterStart.html" %}
+  <!-- Footer End-->
+</footer>
+<!--? Search model Begin -->
+{% include "Project/SearchmodelBegin.html" %}
+<!-- Search model end -->
+<!-- JS here -->
+{% include "Project/JShere.html" %}
+
+</body>
+</html>
