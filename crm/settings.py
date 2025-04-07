@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-_t0$z72j4ahylztuzx(hxc4@5*93!l78$3moa+!orf51f7g$go
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['setting-for-shion-hela.vercel.app']
 
 
 # Application definition
@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'ckeditor',
+    'django_ckeditor_5',
+    'ckeditor_uploader'
     
 ]
 
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware", 
 ]
 
 ROOT_URLCONF = 'crm.urls'
@@ -133,12 +136,21 @@ CKEDITOR_CONFIGS = {
         )
     },
 }
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # This will collect all your static files into the 'staticfiles' folder
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # This tells Django where your custom static files (like CSS or JS) are located
+]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Assuming you have this already
 CKEDITOR_UPLOAD_PATH = 'content/ckeditor/'
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # For serving static files in production
+
 
 STATIC_URL = 'static/'
 
