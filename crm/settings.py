@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-_t0$z72j4ahylztuzx(hxc4@5*93!l78$3moa+!orf51f7g$go
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['setting-for-shion-three.vercel.app/']
+ALLOWED_HOSTS = ['setting-for-shion-three.vercel.app']
 
 
 # Application definition
