@@ -1,5 +1,5 @@
-Django==5.2
-django-ckeditor-5==0.2.17
+Django
+django-ckeditor-5
 Pillow
 gunicorn
 psycopg2-binary 
